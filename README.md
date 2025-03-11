@@ -1,30 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Project Name: Next.js Authentication (Sign Up & Login)
+Overview
+This project demonstrates the use of Next.js 13+ to implement basic Sign Up and Login pages with form validation. The architecture is focused on separating concerns and making the UI components reusable, which helps maintain and scale the project.
 
-## Getting Started
+Key Features
+Form Validation: Ensures proper data is entered by users.
+Reusable UI Components: Sign Up and Login pages are built with modular components.
+Clean Code Structure: The project follows a component-driven architecture to ensure maintainability.
+Project Structure
+my-next-app/
+├── app/
+│   ├ page.tsx                  #SignUp page (handles registration)
+│   ├── Login/
+│   │   └── page.tsx             # Login page (handles authentication)
+│   ├── globals.css              # Global styles
+│   ├── layout.tsx 
+│   ├── page.tsx 
+├── package.json
+├── next.config.js
+└── README.md
+Component Architecture
+1. SignUp Page
+Location: app/page.tsx
+Description: Handles the user registration process, including form submission and validation.
+Main Components:
 
-First, run the development server:
+Form (Main Container): Contains the structure for the form inputs (Full Name, Email, Password) and button.
+Validation: Local state handles form input values and errors. Upon form submission, it validates the inputs, ensuring correct data entry.
 
-```bash
-pnpm dev
-```
+2. Login Page
+Location: app/Login/page.tsx
+Description: This page is responsible for handling user login and authentication.
+Main Components:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Form (Main Container): Contains login form fields (Email, Password) and a button to submit the form.
+Validation: Similar to the SignUp page, the Login page also validates the form before submission.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+How to Run the Project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Clone the repository:
+git clone https://github.com/johnson2611/Task_One.git
+Navigate to the project directory:
 
-## Learn More
+cd Task_One
+Install dependencies:
 
-To learn more about Next.js, take a look at the following resources:
+npm install
+Run the development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+npm run dev
+Open your browser and go to http://localhost:3000 to see the app in action!
