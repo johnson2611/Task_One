@@ -9,7 +9,7 @@ function Sign() {
               <span>Sign Up</span>
             </p>
             <p className="text-center text-base text-gray-700">
-              Keep all your credentials safe
+              All your credentials are safe
             </p>
           </div>
         </div>
